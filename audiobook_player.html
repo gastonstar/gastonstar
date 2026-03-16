@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audible Player - Tommy Rescate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jugador de Audio - Tommy Rescate</h1>
+        <p>Selecciona una página para escuchar:</p>
+        <button onclick="playAudio('page1.mp3')">Página 1</button>
+        <button onclick="playAudio('page2.mp3')">Página 2</button>
+        <button onclick="playAudio('page3.mp3')">Página 3</button>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <script>
+        function playAudio(file) {
+            var player = document.getElementById('audioPlayer');
+            player.src = file;
+            player.play();
+        }
+    </script>
+</body>
+</html>
